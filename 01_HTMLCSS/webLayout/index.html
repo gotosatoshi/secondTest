@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap-reboot.min.css">
+    <style>
+        .gl-header,
+        .top-hero,
+        .top-main,
+        .top-side,
+        .gl-footer {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+​
+        .wrapper {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 685px 300px;
+            column-gap: 15px
+        }
+​
+        .gl-header,
+        .gl-footer {
+            height: 80px;
+            grid-column: span 2;
+        }
+​
+        .top-hero {
+            height: 200px;
+            grid-column: span 2;
+        }
+​
+        .top-main,
+        .top-side {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <!-- .wrapper>header.gl-header>h1{Web Layout}^section.top-hero>h2{Copy Message}^main.top-main>h2{Contents Title}^aside.top-side+footer.gl-footer -->
+    <div class="wrapper">
+        <header class="gl-header">
+            <h1>Web Layout</h1>
+        </header>
+        <section class="top-hero">
+            <h2>Copy Message</h2>
+        </section>
+        <main class="top-main">
+            <h2>Contents Title</h2>
+        </main>
+        <aside class="top-side"></aside>
+        <footer class="gl-footer"></footer>
+    </div>
+</body>
+</html>
+<!-- 余白15px web Layout h1   .gl-header 立て80px
+内部参照のスタイル要素を展開し、全体をクラス「div.wrapper」で画面中央に配置する。
+
+③ その中に下図の設計図面にあるクラス名と数値を参考に、基本的なレイアウトを作成する。
+レイアウトに使用する要素は全て意味のある構造要素を使用し、黒い境界線で可視化する。
+
+HTML構造自体はwrapperからgl-footerまで、Emmetで1行で展開できるので可能であればチャレンジしてみる。
+
+④ 横並びはグリッドレイアウトを使用し、全体のwrapperにグリッドコンテナを指定する。
+
+⑤ 重複指定している3つのプロパティを、グループセレクタでより簡潔なコードにまとめる。
+
+※ 「hero」とはキービジュアルの別称で、メインビジュアルやヒーローイメージ、タイトル画像とも言う。
+
+-->

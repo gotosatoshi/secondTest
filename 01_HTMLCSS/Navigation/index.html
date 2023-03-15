@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Global Navigation</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap-reboot.min.css">
+        <style>
+            /*-------------------------
+            初期値
+            -------------------------*/
+            ul {
+                padding-left: 0;
+                list-style-type: none;
+                max-width: 980px;
+                margin: 0 auto 50px;
+            }
+​
+            a {
+                display: block;
+            }
+​
+            /*-------------------------
+            nav01
+            -------------------------*/
+​
+            .nav01 li {
+                display: inline-block;
+            }
+​
+            .nav01 a {
+                color: #333;
+                padding: 2px 30px;
+            }
+​
+            .nav01 a:hover {
+                color: red;
+            }
+​
+            .nav01 li~li a {
+                border-left: 1px solid #ccc;
+            }
+​
+            /*-------------------------
+            nav02
+            -------------------------*/
+​
+            .nav02 ul {
+                display: table;
+            }
+​
+            .nav02 li {
+                display: table-cell;
+            }
+​
+            .nav02 a {
+                width: 192px;
+                height: 42px;
+                text-indent: -9999px;
+            }
+​
+            .nav02 li:nth-of-type(1) a {
+                background: url("images/btn01.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(2) a {
+                background: url("images/btn02.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(3) a {
+                background: url("images/btn03.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(4) a {
+                background: url("images/btn04.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(5) a {
+                background: url("images/btn05.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(1) a:hover {
+                background: url("images/h/btn01.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(2) a:hover {
+                background: url("images/h/btn02.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(3) a:hover {
+                background: url("images/h/btn03.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(4) a:hover {
+                background: url("images/h/btn04.jpg") 0 0 / cover no-repeat;
+            }
+​
+            .nav02 li:nth-of-type(5) a:hover {
+                background: url("images/h/btn05.jpg") 0 0 / cover no-repeat;
+            }
+​
+        </style>
+    </head>
+    <body>
+        <!-- nav.nav$$*2>ul>li*>a{$#} -->
+        <nav class="nav01">
+            <ul>
+                <li>
+                    <a href="">会社情報</a>
+                </li>
+                <li>
+                    <a href="">製品・サービス</a>
+                </li>
+                <li>
+                    <a href="">カタログ</a>
+                </li>
+                <li>
+                    <a href="">採用情報</a>
+                </li>
+                <li>
+                    <a href="">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav02">
+            <ul>
+                <li>
+                    <a href="">会社情報</a>
+                </li>
+                <li>
+                    <a href="">製品・サービス</a>
+                </li>
+                <li>
+                    <a href="">カタログ</a>
+                </li>
+                <li>
+                    <a href="">採用情報</a>
+                </li>
+                <li>
+                    <a href="">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>
+
+/* 共通条件
+テキスト素材：会社情報、製品・サービス、
+カタログ、採用情報、お問い合わせ
+最適なマークアップは自分で考える。
+全てリンク先は空にする。
+クラス名は全体の囲み要素のみに付けるだけで、
+それ以外はタイプセレクタに指定する。
+横並びにinline-blockを使用する。
+ナビゲーション同士がくっつかないように、
+全体の囲み要素の下に50px余白をあける。
+ボタンの背景画像を個別指定する場合は
+構造疑似セレクタを利用する。
+ボタン画像は imagesフォルダをダウンロードして配置する。
+重複指定しているプロパティはタイプセレクタで初期値として
+複数行コメントの下にまとめ、より行数の少ないコードに調整する。
+
+個別条件
+追加項目	値		追加項目	値
+クラス名	nav.nav01		クラス名	nav.nav02
+全体幅	960pxで中央配置		全体幅	960pxで中央配置
+文字色	#333(ホバー時は赤)		ボタン幅	上下42px/左右192px
+文字装飾	通常は下線無し(リセット上で既に適用済み)		文字	非表示(画像置換)
+クリック範囲	上下2px/左右30px		背景画像	btn01.jpg〜btn05.jpg
+区切り線	実線 #ccc (~を使用)		ホバー時	h/btn01.jpg〜h/btn05.jpg
+*/

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/*-------------------------
+  初期値
+-------------------------*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+min-height: 100%; /* bodyの高さを目一杯拡張 */
+  background: #7ccbf2 url("../images/repeat.jpg") left bottom repeat-x;
+}
+
+
+a {
+  text-decoration: none;
+  letter-spacing: .15em;
+}
+
+em {
+  font-style: normal;
+}
+
+th {
+  text-align: left;
+  vertical-align: top;
+}
+
+/*-------------------------
+  グローバル
+-------------------------*/
+
+.logo {
+  filter: drop-shadow(0 .5px 2px #999);
+}
+
+.gl-footer {
+height: 120px;
+background-color: #211;
+color: white;
+letter-spacing: .3em;
+text-align: center;
+}
+
+/* FF0000 例: 鮮やかで明るい赤
+#007BFF　鮮やかな青
+#6C757D あとなしい青
+#28A745　緑
+#DC3545　明るい
+#FFC107　オレンジ
+#17A2B8 cyan
+#F8F9FA　白
+#343A40 暗い青みグレー
+英語が入ってれば明るめ
+低い数字は暗め
+
+行間はline-height:2など
+字詰めfont-feature-settings:"palt"    ffs
+字間letter-spacing: .3em;
+
+div
+  margin-bottom: 200px;
+  margin-left: 200px;
+  margin-top: 200px;
+  transform: translate(-100px,50px) rotate(45deg) skew(30deg);
+  /* transform: 関数入れられる; */
+
+/* 文字サイズ10px以上小さくならない  */
+/* 横揃えtext-align:left;
+p{text-align: justify;width: 150px;}
+縦揃え
+字送り .en   {text-indent: 1en}
+       .per  {text-indent: 1en}
+
+*/
+/* h1 {text-shadow: 2px 2px 5px rgba(0,0,0, .5);}
+箱影box-shadow: 0 0 3px #ccc);
+画像影filter: drop-shadow(0 0 5px #999);
+箱透明opacity: .3;
+強制継承inheritは受け継ぐという意味p{box-shadow: 0 0 3px #ccc;}
+個別性
+h1 {color: red;}
+h1 {color: green;}
+
+.logo {color: red;}
+h1 {color: green;}
+上記の場合は緑に表示される
+強制指定　！inportantを付ける　コードが増えてきた時の最終手
+背景の前提　サイズ指定
+背景の画像
+繰り返しno-repeat 1枚画像配置
+背景画像の表示サイズ: 画像優先画像全体を表示　:contain;  枠の中に画像埋めつくす　:cover;
+bgで一括指定 background: #ccc url("../images/dot.png") 0 0 / cover no-repeat;
+
+  */

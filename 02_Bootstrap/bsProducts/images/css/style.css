@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* 初期値 */
+
+:root{
+  --key-color: #8e44ad
+  --sub-color: #7e349d;
+}
+
+body {
+    padding-top: 72px;
+    scroll-behavior: smooth;
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 57px;
+  }
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    /* マーカー削除を追記 */
+}
+/* トップ */
+.topics p {
+    float: left;
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+}
+
+.btn-primary {
+  background-color: var(--key-color);
+  border:1px solid  var(--key-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--sub-color);
+  border: 1px solid var(--sub-color);
+}
+footer a {
+  color: var(--key-color);
+}
+
+footer a:hover {
+  color: var(--key-color);
+}
+
+.topics .col-lg-4 {
+  scroll-margin-top:50vm;
+}
+
+
+/* a[href=#].btn.btn-primary{詳細}+a[href=#].btn.btn-warning{公式} */
+/* 上記セレクタに追加	背景色	#8e44ad
+上記セレクタに追加	境界線	1px 実線 #8e44ad
+上記セレクタの下に追加	リンク疑似セレクタ	.btn-primary:hover
+上記セレクタに追加	背景色	#7e349d
+上記セレクタに追加	境界線	1px 実線 #7e349d */
+
+/* btn-outline-primary	境界線
+btn-lg	大
+btn-sm	小
+d-grid (親要素)	左右幅目一杯 */

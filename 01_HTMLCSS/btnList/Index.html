@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button list</title>
+    <style type="text/css">
+        .btn01{
+            font-size: 16px;
+            list-style: none;
+            color: #999;
+        }
+        li{
+            padding: 10px 24px;
+            border: #999 3px;
+            width: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="btn01">
+        <li><a href="#"></a>ボタン01</li>
+        <li><a href="#"></a>ボタン02</li>
+        <li><a href="#"></a>ボタン03</li>
+    </ul>
+</body>
+</html>
+
+<!--
+    ul>li*3^
+① 最初に「01_HTMLCSS」の中に「btnList」フォルダを作成し、
+その中に「index.html」ファイルを作成、基本構造を展開する
+(タイトルは「Button list」とし詳細説明は無し)。
+
+② Emmetを使用し、まずは1つ目のボタンリストのHTML構造を1回で展開する。
+ul要素だけに「btn01」のクラス名を付与する(nav要素は必要無し)。リンク先は全て「#」でよい。
+ul#nav>li.item$*4>a{Item $}
+③ head要素内に内部参照のスタイル要素を展開し、画像と同じになるように
+スタイルを記述する。横並びの指定方法は自由。参考画像は大きいが、
+文字サイズの16pxを基準とし、その他の数値を調整していく。
+
+③ その他の参照数値
+
+ボタンの内側余白は上下が10px、左右が24pxとする。
+影の値は「色#999 / 中心からぼかし3px」とする。
+ホバー時は「最初にゆっくり0.3秒」掛けて「70%薄く」する。
+各ボタンの色は構造疑似クラスを使用する。
+
+② その他の参照数値
+
+最初と最後のボタンだけ構造疑似クラスを使用して角丸にする。
+ボタンのグラデーションは「開始色#eee / 終了色#ccc」
+文字色は「#666」で上書きする。
+ボタンとの間の左側境界線に「50%透明の白」を付ける。
+
+<link rel="stylesheet" href="btn.css">
+
+-->
